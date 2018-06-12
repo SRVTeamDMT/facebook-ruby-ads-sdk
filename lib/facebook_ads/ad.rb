@@ -31,11 +31,12 @@ module FacebookAds
 
     # has_many ad_insights
 
-    def ad_insights(range: Date.today..Date.today, level: 'ad', time_increment: 1)
+    def ad_insights(range: Date.today..Date.today, level: 'ad', time_increment: 1, breakdowns: [])
       query = {
         level: level,
         time_increment: time_increment,
-        time_range: { 'since': range.first.to_s, 'until': range.last.to_s }
+        time_range: { 'since': range.first.to_s, 'until': range.last.to_s },
+        breakdowns: breakdowns
       }
       AdInsight.paginate("/#{id}/insights", query: query)
     end
