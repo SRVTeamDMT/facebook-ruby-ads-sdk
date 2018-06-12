@@ -9,15 +9,10 @@
 This gem allows you to manage your Facebook Ads using a ruby interface. It allows you to list, create, update and destroy Facebook Ad objects (campaigns, ad sets, ads, etc) and get real-time insights about the performance of Facebook Ads.
 
 ## Install
-
-```bash
-gem install facebook_ads
-```
-
-Or, add the following to your Gemfile:
+Add the following to your Gemfile:
 
 ```ruby
-gem 'facebook_ads', '~> 0.1'
+gem 'facebook_ads', github: 'SRVTeamDMT/facebook-ruby-ads-sdk', branch: 'master'
 ```
 
 ## Permissions
